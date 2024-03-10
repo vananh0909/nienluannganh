@@ -1,8 +1,11 @@
-{{-- bệnh nhân --}}
-<div style="text-align: center; color:#757575; font-size:26px; margin-top:14px">
-    <i class="fa-solid fa-hospital-user"></i>
+{{-- cài đặt --}}
+<div style="text-align: center; font-size:26px; margin-top:20px">
+    <a style="color:#757575;" href="{{ route('User.Setting') }}">
+        <i class="fas fa-user-cog"></i>
+    </a>
     <hr>
 </div>
+
 {{-- home --}}
 <div style="text-align: center; font-size:30px; margin-top:30px">
     <a style="color:#757575;" href="{{ route('User.Home') }}">

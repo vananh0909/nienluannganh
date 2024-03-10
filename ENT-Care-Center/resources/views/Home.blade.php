@@ -45,6 +45,13 @@
 
     }
 
+    #dr:hover{
+
+    border: 2px solid rgb(213, 210, 210);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Đổ bóng */
+
+    }
+
     footer{
     background-color:green;
     }

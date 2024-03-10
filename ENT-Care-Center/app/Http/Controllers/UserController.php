@@ -49,4 +49,11 @@ class UserController extends Controller
 
         return view("layouts.dichvu", $this->data);
     }
+
+    public function Setting()
+    {
+        $this->data['title'] = "Cài đặt tài khoản";
+
+        return view("layouts.Setting", $this->data);
+    }
 }
