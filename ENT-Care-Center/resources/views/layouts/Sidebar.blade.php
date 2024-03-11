@@ -24,10 +24,6 @@
     <a style="color:#757575;" href="{{ route('User.dichvu') }}"> <i class="fa-solid fa-list"></i> </a>
 </div>
 
-{{-- cài đặt --}}
-<div style="text-align: center; color:#757575; font-size:26px; margin-top:30px">
-    <i class="fas fa-user-cog"></i>
-</div>
 
 {{-- lịch sử khám --}}
 <div style="text-align: center; color:#757575; font-size:26px; margin-top:30px">

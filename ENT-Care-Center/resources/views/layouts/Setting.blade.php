@@ -23,12 +23,98 @@
                     </div>
 
 
-                    <div style="background-color: #eb7575; width: 1000px; border-radius:6px; margin:0 auto" class="col-md-6">
+                    <div style=" width: 1000px; border-radius:6px; margin:0 auto;  border: 1px solid rgb(90, 85, 85);"
+                        class="col-md-6">
 
 
-                        vghbjn
+                        <div style="text-align:center;">
+                            <img class="rounded-circle"
+                                style="width: 160px; height: 160px; margin-top:18px; margin-bottom: 12px"
+                                src="https://chungkhoantaichinh.vn/wp-content/uploads/2022/12/avatar-meo-cute-de-thuong-05.jpg">
+
+                            <p style="font-weight:400; font-size: 18px; text-transform: uppercase;">Nguyễn Thị Vân Anh</p>
+
+                            <form style="margin: 0 auto">
+
+                                <div style="padding-top: 10px;">
+                                    <input style="width: 360px;margin: 0 auto;" class="form-control" type="text"
+                                        placeholder='Nguyễn Thị Vân Anh' aria-label=".form-control-lg example">
+
+                                </div>
+
+                                <div style="text-align: center;">
+                                    <div style="display: inline-block; padding-top: 10px;"
+                                        class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">🧒🏻 Nam</label>
+                                    </div>
+
+                                    <div style="display: inline-block; padding-top: 10px;"
+                                        class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">👩🏻 Nữ</label>
+                                    </div>
+                                </div>
+
+
+                                <div style="padding-top: 10px">
+                                    <input style="width: 360px; margin: 0 auto" class="form-control" type="text"
+                                        id="lich" placeholder='09-10-2002' aria-label=".form-control-lg example">
+
+                                </div>
+
+                                <div style="padding-top: 10px">
+                                    <input style="width: 360px; margin: 0 auto" class="form-control" type="text"
+                                        placeholder='0924546770' aria-label=".form-control-lg example">
+
+                                </div>
+
+                                <div style="padding-top: 10px">
+
+
+                                    <input style="width: 360px; margin: 0 auto" class="form-control" type="text"
+                                        placeholder='vananh@gmail.com' aria-label=".form-control-lg example">
+
+                                </div>
+
+                                <div style="padding-top: 10px">
+
+
+                                    <input style="width: 360px; margin: 0 auto" class="form-control" type="text"
+                                        placeholder='Quản Trọng Hoàng, Hưng Lợi, Ninh Kiều, Cần Thơ'
+                                        aria-label=".form-control-lg example">
+
+                                </div>
+
+
+                                <div style="padding-top: 20px; text-align:center ">
+
+                                    <a href="{{ route('User.Home') }}" style="margin-right:10px" type="button"
+                                        class="btn btn-outline-secondary">
+                                        Quay
+                                        lại</a>
+                                    <a href="#"type="button" class="btn btn-info"> Cập nhật </a>
+
+                                </div>
+
+
+
+
+
+
+                            </form>
+
+
+
+                        </div>
+
+                        <br>
 
                     </div>
+
+
 
 
                 </div>

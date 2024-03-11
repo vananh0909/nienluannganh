@@ -3,7 +3,6 @@
     {{ $title }}
 @endsection
 @section('content')
-    {{-- <h1>Trang home nef</h1> --}}
     <div style=" background: linear-gradient(rgba(127, 168, 209, 0.3) ,rgba(68, 158, 210, 0.8)); height: 728px;
         position: fixed;  top: 0; left: 0; bottom: 0; "
         class="col-md-1">
@@ -24,8 +23,68 @@
 
 
                     <div style="background-color: #ffffff; width: 1000px; border-radius:6px; margin:0 auto" class="col-md-6">
+                        <div style=" width:95%; margin: 0 auto">
 
+                            <p style="padding-top:14px; font-weight:500; font-style:italic; text-align: justify;">
+                                Phòng khám Tai Mũi Họng ENT Care Center cung cấp các dịch vụ chăm
+                                sóc sức khỏe đảm bảo chất lượng và tối ưu chi phí cho Khách hàng và Doanh nghiệp. Các gói
+                                dịch
+                                vụ và chi phí dịch vụ có thể được chỉnh sửa nhằm phù hợp với từng nhu cầu cụ thể của các đối
+                                tượng Khách hàng. </p>
 
+                        </div>
+
+                        <table class="table table-striped table-hover" style=" width:95%; margin: 0 auto; font-weight:500;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">TÊN DỊCH VỤ</th>
+                                    <th scope="col">ĐƠN GIÁ</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <th scope="row">1</th>
+                                    <td>Đặt hẹn lựa chọn Bác sĩ và Giờ Khám bệnh</td>
+                                    <td>Không thu phí</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Khám và Nội soi Tai - Mũi - Họng</td>
+                                    <td>400,000</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Tái khám và Nội soi Tai - Mũi - Họng</td>
+                                    <td>330,000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Đo thính lực</td>
+                                    <td>250,000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Chức năng thông khí vòi nhĩ</td>
+                                    <td>250,000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Tư vấn Nha Khoa</td>
+                                    <td>200,000</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <br>
+                        <br>
+                        <hr style="width:99%; margin:0 auto">
+                        <br>
                         <div style=" margin-left:8px; margin-bottom: 20px; padding-top: 8px">
 
                             <div style="margin-top: 8px; display: inline-block;">

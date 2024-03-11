@@ -10,49 +10,49 @@ class UserController extends Controller
 
     public function index()
     {
-        $this->data['title'] = "Trang chủ";
+        $this->data['title'] = "TRANG CHỦ";
 
         return view("Home", $this->data);
     }
 
     public function lichkham()
     {
-        $this->data['title'] = "Đặt lịch khám";
+        $this->data['title'] = "ĐẶT LỊCH KHÁM";
 
         return view("layouts.lichkham", $this->data);
     }
 
     public function lichkham2()
     {
-        $this->data['title'] = "Đặt lịch khám";
+        $this->data['title'] = "ĐẶT LỊCH KHÁM";
 
         return view("layouts.lichkham2", $this->data);
     }
 
     public function lichkham3()
     {
-        $this->data['title'] = "Đặt lịch khám";
+        $this->data['title'] = "ĐẶT LỊCH KHÁM";
 
         return view("layouts.lichkham3", $this->data);
     }
 
     public function doctors()
     {
-        $this->data['title'] = "Danh sách bác sĩ";
+        $this->data['title'] = "DANH SÁCH BÁC SĨ";
 
         return view("layouts.doctors", $this->data);
     }
 
     public function dichvu()
     {
-        $this->data['title'] = "Gói dịch vụ";
+        $this->data['title'] = "GÓI DỊCH VỤ";
 
         return view("layouts.dichvu", $this->data);
     }
 
     public function Setting()
     {
-        $this->data['title'] = "Cài đặt tài khoản";
+        $this->data['title'] = "CÀI ĐẶT TÀI KHOẢN";
 
         return view("layouts.Setting", $this->data);
     }
