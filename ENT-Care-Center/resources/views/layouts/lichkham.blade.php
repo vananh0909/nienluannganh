@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-8" style="background-color:rgb(234, 235, 239); margin-left: 6px">
                     <div style="text-align:center; margin-top: 6px; padding-bottom: 8px">
-                        <h1 style=" font-size: 24px; "> Đăng ký lịch khám </h1>
+                        <h1 style=" font-size: 24px; "> ĐĂNG KÍ LỊCH KHÁM </h1>
                     </div>
 
 
@@ -96,9 +96,11 @@
                                 chỉ là thời gian dự
                                 kiến, tổng đài sẽ liên hệ xác nhận thời gian
                                 khám chính xác tới quý khách sau khi quý khách đặt hẹn</p>
-                            <div style="text-align:center">
-                                <a href="{{ route('User.lichkham2') }}" style=" margin-top: 18px" type="button"
-                                    class="btn btn-info">Tiếp tục</a>
+                            <div style="text-align:center;margin-top: 26px">
+                                <a style="width:82px; margin-right:4px"
+                                    href="{{ route('User.Home') }}"class="btn btn-outline-secondary">
+                                    Trở lại</a>
+                                <a href="{{ route('User.lichkham2') }}" class="btn btn-info">Tiếp tục</a>
                             </div>
 
                         </div>

@@ -52,8 +52,16 @@ class UserController extends Controller
 
     public function Setting()
     {
-        $this->data['title'] = "CÀI ĐẶT TÀI KHOẢN";
+        $this->data['title'] = 'CÀI ĐẶT TÀI KHOẢN';
 
         return view("layouts.Setting", $this->data);
+    }
+
+    public function lichsukham()
+    {
+        $this->data['title'] = 'LỊCH SỬ KHÁM';
+
+
+        return view("layouts.lichsukham", $this->data);
     }
 }

@@ -16,85 +16,115 @@
         <main>
 
             <div class="row">
-                <div class="col-md-11" style="background-color:rgb(234, 235, 239); margin-left: 6px">
+                <div class="col-md-8" style="background-color:rgb(234, 235, 239); margin-left: 6px">
                     <div style="text-align:center; margin-top: 6px; padding-bottom: 8px">
-                        <h1 style=" font-size: 24px; "> Danh sách bác sĩ </h1>
+                        <h1 style=" font-size: 24px; "> DANH SÁCH BÁC SĨ</h1>
 
                     </div>
-                    <div
-                        style="background-color:rgb(234, 235, 239); width: 1000px; height:auto; border-radius:6px; margin:0 auto; align-items:center;">
+                    <div style="background-color: rgb(234, 235, 239); width: 1000px; border-radius:6px; margin:0 auto"
+                        class="col-md-6">
                         <br>
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
-                            <img style="width: 135px; height: 135px; margin-top: 10px; "
-                                src="https://hthaostudio.com/wp-content/uploads/2022/08/Anh-profile-bac-si-nu-min.jpg.webp">
-                            <div>
-                                <h1 style=" display:flex"> Bác sĩ ABCCC</h1>
+                        <div id="right"
+                            style="display: flex; background-color: #ffffff; width: 900px; height: 180px; margin: 0 auto; border-radius: 6px; overflow: auto;">
 
+                            <div style="flex: 1; margin: 10px;">
+                                <img style="width: 135px; height: 158px; border-radius: 6px;"
+                                    src="https://www.fvhospital.com/wp-content/uploads/2017/05/BS-Khuc-Minh-Thuy.jpg">
                             </div>
-
-                            <div>
-                                <p> xem thêm</p>
+                            <div style="flex: 2; margin-right: 30px ">
+                                <h3 style="font-size: 18px; color: rgba(68, 158, 210, 0.8); margin-top:10px">
+                                    Bác sĩ Phan Quỳnh Lan</h3>
+                                <p><i class="fa-solid fa-graduation-cap"></i> Thạc sĩ, Bác sĩ</p>
+                                <p style="width:700px;text-align: justify;"> Bác sĩ Phan Quỳnh Lan đã liên tục hoàn thành
+                                    các khóa đào tạo nâng
+                                    cao về đào tạo chuyên
+                                    ngành về tai - mũi - họng và phẫu thuật đầu cổ tại các trường Đại học lớn ở Pháp.Hiện
+                                    tại, ThS. BS Phan Quỳnh Lan đang giữ chức vụ là Trưởng khoa Liên chuyên khoa kiêm
+                                    Trưởng đơn nguyên Tai - Mũi - Họng tại phòng khám ENT CARE CENTER.</p>
                             </div>
+                        </div>
 
 
+
+                        <br>
+
+
+                        <div id="right"
+                            style="display: flex; background-color: #ffffff; width: 900px; height: 180px; margin: 0 auto; border-radius: 6px; overflow: auto;">
+
+                            <div style="flex: 1; margin: 10px;">
+                                <img style="width: 135px; height: 158px; border-radius: 6px;"
+                                    src="https://htmediagroup.vn/wp-content/uploads/2022/09/Anh-bac-si-nu-1-min.jpg">
+                            </div>
+                            <div style="flex: 2; margin-right: 30px ">
+                                <h3 style="font-size: 18px; color: rgba(68, 158, 210, 0.8);margin-top:10px">
+                                    Bác sĩ Văn Bội Ngọc
+                                </h3>
+                                <p><i class="fa-solid fa-graduation-cap"></i> Thạc sĩ, Bác sĩ</p>
+                                <p style="width:700px;text-align: justify;">
+                                    ThS. BS Văn Bội Ngọc đã có nhiều năm kinh nghiệm trong lĩnh vực Tai mũi họng.
+
+                                    Hiện tại, ThS. BS Văn Bội Ngọc đang giữ chức vụ là Bác sĩ Tai mũi họng - Phòng khám ENT
+                                    CARE CENTER.
+                                </p>
+                            </div>
                         </div>
 
                         <br>
 
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
 
+
+                        <div id="right"
+                            style="display: flex; background-color: #ffffff; width: 900px; height: 180px; margin: 0 auto; border-radius: 6px; overflow: auto;">
+
+                            <div style="flex: 1; margin: 10px;">
+                                <img style="width: 135px; height: 158px; border-radius: 6px;"
+                                    src="https://htmediagroup.vn/wp-content/uploads/2023/03/Anh-bac-si-nam-8-min.jpg">
+                            </div>
+                            <div style="flex: 2; margin-right: 30px ">
+                                <h3 style="font-size: 18px; color: rgba(68, 158, 210, 0.8);margin-top:10px">
+                                    Bác sĩ Lê Tuấn Nhật Hoàng
+                                </h3>
+                                <p><i class="fa-solid fa-graduation-cap"></i> Thạc sĩ, Bác sĩ</p>
+                                <p style="width:700px;text-align: justify;">
+                                    BS Hoàng là thành viên của Hội Tai - Mũi - Họng các tỉnh phía Bắc, Hội Tai - Mũi - Họng
+                                    Việt Nam.
+
+                                    Hiện tại, ThS. BSNT Lê Tuấn Nhật Hoàng là Bác sĩ Tai - Mũi - Họng, khoa Liên chuyên
+                                    khoa, Phòng khám ENT
+                                    CARE CENTER.
+                                </p>
+                            </div>
                         </div>
 
                         <br>
 
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
 
+
+                        <div id="right"
+                            style="display: flex; background-color: #ffffff; width: 900px; height: 180px; margin: 0 auto; border-radius: 6px; overflow: auto;">
+
+                            <div style="flex: 1; margin: 10px;">
+                                <img style="width: 135px; height: 158px; border-radius: 6px;"
+                                    src="https://honghunghospital.com.vn/wp-content/uploads/2020/05/41.-Phan-V%C4%83n-Ch%C3%AD-scaled.jpg">
+                            </div>
+                            <div style="flex: 2; margin-right: 30px ">
+                                <h3 style="font-size: 18px; color: rgba(68, 158, 210, 0.8);margin-top:10px">
+                                    Bác sĩ Nguyễn Văn Thái
+                                </h3>
+                                <p><i class="fa-solid fa-graduation-cap"></i> Thạc sĩ, Bác sĩ</p>
+                                <p style="width:700px;text-align: justify;">
+                                    Bác sĩ Nguyễn Văn Thái đã có hơn 20 năm kinh nghiệm trong lĩnh vực Tai mũi họng.
+
+                                    Hiện tại, BSCK II Nguyễn Văn Thái đang giữ chức vụ là bác sĩ Tai mũi họng - Phòng khám
+                                    ENT
+                                    CARE CENTER.
+                                </p>
+                            </div>
                         </div>
 
                         <br>
 
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
-
-                        </div>
-
-                        <br>
-
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
-
-                        </div>
-
-                        <br>
-
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
-
-                        </div>
-
-                        <br>
-
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
-
-                        </div>
-
-                        <br>
-
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
-
-                        </div>
-
-                        <br>
-
-                        <div style="background-color:#ffffff; width: 980px; height:160px; margin: 0 auto; border-radius:6px "
-                            class="doctors">
-
-                        </div>
 
 
                         <br>
@@ -102,79 +132,49 @@
                 </div>
 
 
-
-
-
-                {{-- <div class="col-md-3"
-                    style="background-color:#ffffff; width:356px; border-radius: 6px;margin-left:16px;margin-bottom:6px">
-                    <iframe style="margin-left:2px; margin-top: 4px"
-                        src="https://calendar.google.com/calendar/embed?height=280&wkst=1&ctz=Asia%2FHo_Chi_Minh&bgcolor=%23ffffff&showNav=0&showTitle=0&showPrint=0&showTabs=0&showTz=0&src=YW5oYjIwMTQ4MTRAc3R1ZGVudC5jdHUuZWR1LnZu&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21iYjE0NzY0ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21iOGE3ZDViZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mZmM4MWZhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20zNzhkYjBiZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mNTUxOWY3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20xMTJjMjZkY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201NmM0NWM3NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mNmJmYjVhMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20yMzgwYTlhZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20zMzVlNjhjYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb202OTRkZGE0YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201MzcxZTQxNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%23202124&color=%230047a8&color=%23007b83&color=%23137333&color=%230047a8&color=%230047a8&color=%23202124&color=%230047a8&color=%23202124&color=%230B8043&color=%23c26401&color=%230047a8&color=%23007b83&color=%23202124"
-                        width="330" height="240" frameborder="0" scrolling="no">
-                    </iframe>
-                    <hr>
-                    <div>
-                        <p style="font-size:14px; color:rgb(86, 86, 86);">
-                            <i class="fa-solid fa-bell"></i>
-                            Thông báo mới
-
-                        </p>
-                    </div>
-                    <div class="alert alert-light" style="box-shadow: 0 2px 4px rgba(105, 105, 105, 0.2)" role="alert">
-                        TBao 1
-                    </div>
-                    <div class="alert alert-light" style="box-shadow: 0 2px 4px rgba(105, 105, 105, 0.2)" role="alert">
-                        TBao 2
-                    </div>
-                    <div class="alert alert-light" style="box-shadow: 0 2px 4px rgba(105, 105, 105, 0.2)" role="alert">
-                        TBao 3
-                    </div>
-                    <div class="alert alert-light" style="box-shadow: 0 2px 4px rgba(105, 105, 105, 0.2)"role="alert">
-                        TBao 4
-                    </div>
-                    <div style="text-align: center; color:rgb(213, 210, 210);">
-                        <i style="padding:0" class="fa-solid fa-ellipsis"></i>
-                    </div>
+                <div class="col-md-3"
+                    style="background-color:#ffffff; width:356px; border-radius: 6px;margin-left:16px;margin-bottom:6px;height:642px;">
+                    @include('layouts.Right')
                 </div>
             </div>
+
 
 
         </main>
 
 
-    </div> --}}
-
-
-
-            </div>
-        @endsection
+    </div>
+@endsection
 
 
 
 
-        @section('css')
-            .doctors:hover{
-            border: 2px solid rgb(213, 210, 210);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Đổ bóng */
-            }
-            .col-md-1{
-            margin-right:34px;
-            width:65px;
-            }
 
-            .header{
-            height:60px;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            }
 
-            .col-md-8{
-            width: 1000px;
-            margin-right:25px;
-            border-radius: 6px;
+@section('css')
+    #doctors:hover{
+    border: 2px solid rgb(213, 210, 210);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Đổ bóng */
+    }
+    .col-md-1{
+    margin-right:34px;
+    width:65px;
+    }
 
-            }
+    .header{
+    height:60px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    }
 
-            footer{
-            background-color:green;
-            }
-        @endsection
+    .col-md-8{
+    width: 1000px;
+    margin-right:25px;
+    border-radius: 6px;
+
+    }
+
+    footer{
+    background-color:green;
+    }
+@endsection

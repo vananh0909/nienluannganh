@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-8" style="background-color:rgb(234, 235, 239); margin-left: 6px">
                     <div style="text-align:center; margin-top: 6px; padding-bottom: 8px">
-                        <h1 style=" font-size: 24px; "> Đăng ký lịch khám </h1>
+                        <h1 style=" font-size: 24px; "> ĐĂNG KÝ LỊCH KHÁM </h1>
 
                     </div>
 
@@ -88,11 +88,10 @@
                             </div>
                             <div style=" text-align:center ">
 
-                                <a href="{{ route('User.lichkham2') }}" style="margin-right:10px" type="button"
+                                <a style="width:82px; margin-right:10px" href="{{ route('User.lichkham2') }}"
                                     class="btn btn-outline-secondary">
-                                    Quay
-                                    lại</a>
-                                <a href="{{ route('User.lichkham3') }}"type="button" class="btn btn-info"> Xác nhận </a>
+                                    Trở lại</a>
+                                <a href="{{ route('User.lichkham3') }}" class="btn btn-info"> Xác nhận </a>
 
                             </div>
 

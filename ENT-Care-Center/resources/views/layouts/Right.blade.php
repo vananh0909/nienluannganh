@@ -51,6 +51,23 @@
 </div>
 
 @section('css')
+    #icon {
+    text-align: center;
+    width: 25px;
+    height: 22px;
+    border: 1px solid rgb(154, 153, 153);
+    border-radius: 4px;
+    padding-top: 2px;
+    margin-left:4px;
+    color:rgba(68, 158, 210, 0.8);
+    }
+
+    #icon:hover{
+    box-shadow: 0 0 10px rgba(68, 158, 210, 0.8);
+    cursor: pointer;
+    color: red
+
+    }
     .col-md-1{
     margin-right:34px;
     width:65px;
@@ -80,6 +97,12 @@
 
     border: 2px solid rgb(213, 210, 210);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Đổ bóng */
+
+    }
+
+    #sidebar:hover{
+    color:rgba(68, 158, 210, 0.8);
+    cursor: pointer;
 
     }
 

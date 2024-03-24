@@ -12,4 +12,5 @@ Route::prefix('User')->name('User.')->group(function () {
     Route::get('doctors', [UserController::class, 'doctors'])->name('doctors');
     Route::get('dichvu', [UserController::class, 'dichvu'])->name('dichvu');
     Route::get('caidattaikhoan', [UserController::class, 'Setting'])->name('Setting');
+    Route::get('lichsukham', [UserController::class, 'lichsukham'])->name('lichsukham');
 });

@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-8" style="background-color:rgb(234, 235, 239); margin-left: 6px">
                     <div style="text-align:center; margin-top: 6px; padding-bottom: 8px">
-                        <h1 style=" font-size: 24px; "> Đăng ký lịch khám </h1>
+                        <h1 style=" font-size: 24px; "> ĐĂNG KÍ LỊCH KHÁM </h1>
 
                     </div>
 
@@ -33,7 +33,7 @@
                             </p>
                             <p style=" margin-top:6px; display: inline; font-size: 18px"> Nhập thông tin người khám</p>
                             <hr style="margin-left:-8px; color:#a1a1a1">
-                            <form style="padding-top: 16px;   margin: 0 auto">
+                            <form style="padding-top: 16px;   margin: 0 auto; ">
 
                                 <div style="padding-top: 20px;">
                                     <input style="width: 365px;margin: 0 auto;" class="form-control" type="text"
@@ -85,13 +85,11 @@
 
                                 </div>
 
-                                <div style="padding-top: 20px; text-align:center ">
+                                <div style="padding-top: 10px; text-align:center ">
 
-                                    <a href="{{ route('User.lichkham') }}" style="margin-right:10px" type="button"
-                                        class="btn btn-outline-secondary">
-                                        Quay
-                                        lại</a>
-                                    <a href="{{ route('User.lichkham3') }}"type="button" class="btn btn-info"> Tiếp tục </a>
+                                    <a style="width:82px; margin-right:10px" href="{{ route('User.lichkham') }}"
+                                        class="btn btn-outline-secondary">Trở lại</a>
+                                    <a href="{{ route('User.lichkham3') }}" class="btn btn-info">Tiếp tục</a>
 
                                 </div>
 
