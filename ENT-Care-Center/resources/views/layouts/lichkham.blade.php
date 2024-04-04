@@ -38,7 +38,7 @@
 
                         <select class="form-select" style=" width: 400px; margin: 0 auto; padding: 6px"
                             aria-label="Default select example">
-                            <option selected> Chọn bác sĩ khám</option>
+                            <option selected> Chọn bác sĩ khám (<span style="color:red">*</span>)</option>
                             <option value="1">Nguyen Minh Tuan</option>
                             <option value="2">Nguyen Thanh Son</option>
                             <option value="3">Nguyen Mai Anh</option>
@@ -46,14 +46,14 @@
 
                         <div style="margin: 10px">
                             <p> Thời gian khám</p>
-                            <p> Ngày khám (*)</p>
-                            <div style="text-align:center; margin:12px">
-                                <button style="margin-right: 8px" type="button" class="btn btn-light">24/2</button>
-                                <button style="margin-right: 8px" type="button" class="btn btn-light">25-2</button>
-                                <button style="margin-right: 8px" type="button" class="btn btn-light">26/2</button>
-                                <button type="button" class="btn btn-light"><i class="fa-solid fa-plus"></i></button>
+                            <p> Ngày khám (<span style="color:red">*</span>)</p>
+                            <div style=" width: 400px; margin: 0 auto; ">
+                                <input style="margin-top: 10px; margin-bottom: 10px" id="nganhang" class="form-control"
+                                    type="date" aria-label=".form-control-lg example">
+
+
                             </div>
-                            <p>Giờ khám (*)</p>
+                            <p>Giờ khám (<span style="color:red">*</span>)</p>
 
                             <div style="text-align:center; margin:12px">
                                 <button style="margin-right: 8px; margin-bottom:4px" type="button"
@@ -90,13 +90,13 @@
 
                             </div>
 
-                            <p style="font-size:12px; font-weight:bold; color:rgb(86, 86, 86); margin-top: 14px"> Lưu ý:
+                            <p style="font-size:12px; font-weight:bold; color:rgb(86, 86, 86); margin-top: 40px"> Lưu ý:
                                 Thời
                                 gian khám trên
                                 chỉ là thời gian dự
                                 kiến, tổng đài sẽ liên hệ xác nhận thời gian
                                 khám chính xác tới quý khách sau khi quý khách đặt hẹn</p>
-                            <div style="text-align:center;margin-top: 26px">
+                            <div style="text-align:center;margin-top: 60px">
                                 <a style="width:82px; margin-right:4px"
                                     href="{{ route('User.Home') }}"class="btn btn-outline-secondary">
                                     Trở lại</a>

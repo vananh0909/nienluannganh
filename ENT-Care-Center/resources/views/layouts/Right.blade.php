@@ -68,6 +68,21 @@
     color: red
 
     }
+
+    .mxh {
+    width: 40px;
+    padding: 2px;
+    border: 1px solid rgb(98, 98, 102);
+    border-radius: 4px;
+    color:rgba(68, 158, 210, 0.8);
+    }
+
+    .mxh:hover{
+    box-shadow: 0 0 10px rgba(68, 158, 210, 0.8);
+    cursor: pointer;
+
+    }
+
     .col-md-1{
     margin-right:34px;
     width:65px;
