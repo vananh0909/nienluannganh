@@ -32,14 +32,15 @@
             class="fa-solid fa-clock-rotate-left"></i> </a>
 </div>
 
-{{-- liên hệ  --}}
-{{-- <div style="text-align: center; color:#757575; font-size:30px; margin-top:30px">
-    <i class="fa-solid fa-square-phone"></i>
-</div>
- --}}
+
 
 
 <div style="text-align: center; color:#757575; font-size:26px; margin-top:290px">
     <hr>
-    <i id="sidebar" class="fa-solid fa-right-from-bracket"></i>
+    <form id="logout-form" action="{{ route('User.logout') }}" method="POST">
+        @csrf
+        <button type="submit"><i id="sidebar" class="fa-solid fa-right-from-bracket"></i></button>
+    </form>
+
+
 </div>

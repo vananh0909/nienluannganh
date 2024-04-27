@@ -18,184 +18,62 @@
             <div class="row">
                 <div class="col-md-8" style="background-color:rgb(234, 235, 239); margin-left: 6px">
                     <div style="text-align:center; margin-top: 6px; padding-bottom: 8px">
-                        <h1 style=" font-size: 24px; "> LỊCH SỬ KHÁM BỆNH </h1>
+                        <h1 style=" font-size: 24px; "> LỊCH SỬ LỊCH HẸN </h1>
 
                     </div>
+                    @if (session('user'))
+                        <div style="background-color: #ffffff; width: 1000px; border-radius:6px; margin:0 auto"
+                            class="col-md-6">
 
-                    <div style="background-color: #ffffff; width: 1000px; border-radius:6px; margin:0 auto" class="col-md-6">
+                            <table class="table table-striped table-hover"
+                                style=" width:98%; margin: 0 auto; font-weight:400;">
+                                <thead>
+                                    <tr style="color: rgba(68, 158, 210, 0.8);">
+                                        <th scope="col">STT</th>
+                                        <th scope="col">Ngày Khám</th>
+                                        <th scope="col">Giờ khám</th>
+                                        <th scope="col">Bác sĩ</th>
+                                        <th scope="col">Triệu chứng</th>
+                                        <th scope="col">Hành động</th>
 
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                        <table class="table table-striped table-hover" style=" width:98%; margin: 0 auto; font-weight:400;">
-                            <thead>
-                                <tr style="color: rgba(68, 158, 210, 0.8);">
-                                    <th scope="col">STT</th>
-                                    <th scope="col">Ngày Khám</th>
-                                    <th scope="col">Chuẩn Đoán</th>
-                                    <th scope="col">Bác Sĩ</th>
-                                    <th scope="col">Ghi Chú</th>
-                                    <th scope="col">Hành Động</th>
+                                    @foreach ($lichhen as $ls)
+                                        <tr>
 
-                                </tr>
-                            </thead>
-                            <tbody>
+                                            <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
+                                            <th scope="col">{{ $ls->LH_Ngaykham }}</th>
+                                            <th scope="col">{{ $ls->LH_Giokham }}</th>
+                                            <th scope="col">{{ $ls->LH_BSkham }}</th>
+                                            <th scope="col">{{ $ls->LH_trieuchung }}</th>
 
+                                            <td>
+                                                <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                    class="fa-solid fa-pills"></i>
+                                                @include('layouts.modal')
+                                                {{-- <i id="icon" class="fa-solid fa-pen"></i>
+                                                <i id="icon" class="fa-solid fa-trash-can"></i> --}}
+                                            </td>
 
-                                <tr>
-
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
-
-                                </tr>
+                                        </tr>
+                                    @endforeach
 
 
-                                <tr>
+                                </tbody>
 
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
+                            </table>
 
-                                </tr>
-
-
-                                <tr>
-
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <th style="color: rgba(68, 158, 210, 0.8);" scope="row">1</th>
-                                    <td>24-03-2024</td>
-                                    <td>Cảm Nặng</td>
-                                    <td>Nguyễn Minh Thái</td>
-                                    <td>Đau đầu, sốt cao, đau họng</td>
-                                    <td>
-                                        <i id="icon" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                            class="fa-solid fa-pills"></i>
-                                        @include('layouts.modal')
-                                        <i id="icon" class="fa-solid fa-pen"></i>
-                                        <i id="icon" class="fa-solid fa-trash-can"></i>
-                                    </td>
-
-                                </tr>
-
-
-
-
-
-
-
-                            </tbody>
-
-                        </table>
-
-                        <br>
-                    </div>
-
+                            <br>
+                        </div>
+                    @else
+                        <div style="background-color:rgb(234, 235, 239); width: 1000px; height: 580px; border-radius:6px; margin:0 auto;border: 1px solid rgb(154, 153, 153);"
+                            class="col-md-6">
+                            <h1 style="text-align: center; padding-top: 240px; font-size: 22px;  color:rgb(86, 86, 86);">
+                                KHÔNG CÓ LỊCH SỬ ĐỂ HIỂN THỊ</h1>
+                        </div>
+                    @endif
                 </div>
 
                 <div class="col-md-3"

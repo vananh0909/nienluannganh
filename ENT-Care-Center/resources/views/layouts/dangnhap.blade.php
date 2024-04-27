@@ -1,4 +1,5 @@
 @extends('Clients.Client')
+
 @section('title')
     {{ $title }}
 @endsection
@@ -105,10 +106,21 @@
 
     </div>
 
+    @if (session('msg'))
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            Swal.fire({
+                title: "Đăng Ký Thành Công ✅",
+                text: "Mời bạn đăng nhập để đặt lịch hẹn",
+                icon: "success"
+            });
+        </script>
+    @endif
 
 
     </div>
 @endsection
+
 
 
 

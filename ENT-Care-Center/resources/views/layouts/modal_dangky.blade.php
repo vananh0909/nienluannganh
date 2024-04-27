@@ -10,7 +10,8 @@
             </div>
             <div class="modal-body">
 
-                <form style="margin: 0 auto" method="POST" action="{{ route('User.dangky') }}">
+                <form style="margin: 0 auto" method="POST" action="{{ route('User.dangky') }}"
+                    enctype="multipart/form-data">
                     @csrf
 
                     <div style="padding-top: 14px;">
@@ -135,19 +136,11 @@
 
 
                         <div style="text-align: center; padding-top: 34px">
-                            <button type="submit" class="btn btn-info">Đăng Ký</button>
+                            <button id="tbao" type="submit" class="btn btn-info">Đăng Ký</button>
                             <br>
                             <br>
                         </div>
-                        {{-- <script>
-                            document.getElementById('loginBtn').addEventListener('click', function() {
-                                Swal.fire({
-                                    title: "Đăng Ký Thành Công",
-                                    // text: "You clicked the button!",
-                                    icon: "success"
-                                });
-                            });
-                        </script> --}}
+
 
 
 

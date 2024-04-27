@@ -18,90 +18,108 @@
             <div class="row">
                 <div class="col-md-8" style="background-color:rgb(234, 235, 239); margin-left: 6px">
                     <div style="text-align:center; margin-top: 6px; padding-bottom: 8px">
-                        <h1 style=" font-size: 24px; "> ĐĂNG KÍ LỊCH KHÁM </h1>
+                        <h1 style=" font-size: 24px; "> XÁC NHẬN THÔNG TIN </h1>
 
                     </div>
 
 
                     <div style="background-color: #ffffff; width: 1000px; height:584px; border-radius:6px; margin:0 auto"
                         class="col-md-6">
-                        <div style=" margin-left:8px; margin-bottom: 20px; padding-top: 4px">
-                            <p
-                                style=" margin-top:5px; display: inline; color:rgb(86, 86, 86); font-size: 18px; font-weight:bold;">
-                                Bước 2/3
-                                :
-                            </p>
-                            <p style=" margin-top:6px; display: inline; font-size: 18px"> Nhập thông tin người khám</p>
+                        <div style=" margin-left:8px; padding-top: 4px">
+
                             <hr style="margin-left:-8px; color:#a1a1a1">
-                            <form style="padding-top: 16px;   margin: 0 auto; ">
-
-                                <div style="padding-top: 20px;">
-                                    <input style="width: 365px;margin: 0 auto;" class="form-control" type="text"
-                                        placeholder='Họ và tên (*)' aria-label=".form-control-lg example">
-
-                                </div>
-
-                                <div style="text-align: center;">
-                                    <div style="display: inline-block; padding-top: 20px;"
-                                        class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">🧒🏻 Nam</label>
-                                    </div>
-
-                                    <div style="display: inline-block; padding-top: 20px;"
-                                        class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio2" value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">👩🏻 Nữ</label>
-                                    </div>
-                                </div>
+                            <h2 style="font-size:18px; font-weight:bold; color:rgb(77, 141, 197)"> Dịch vụ </h2>
+                            <div style=" margin-top: 10px">
+                                <p style="font-size:16px; display: inline-block; margin-right:60px"> Hình thức : </p>
+                                <p style="font-size:16px; display: inline-block;"> Khám trực tiếp tại phòng khám </p>
+                            </div>
 
 
-                                <div style="padding-top: 20px">
-                                    <input style="width: 365px; margin: 0 auto" class="form-control" type="text"
-                                        id="lich" placeholder='Ngày sinh (*)' aria-label=".form-control-lg example">
+                            <h2 style="font-size:18px; font-weight:bold; color:rgb(77, 141, 197)"> Khách hàng</h2>
+                            <div style=" margin-top: 10px;font-size:16px;">
+                                @if ($allData)
+                                    @foreach ($allData as $data)
+                                        <p style="display: inline-block; margin-right:104px"> Tên : </p>
+                                        <p style="display: inline-block;"> {{ $data->CUS_Name }}</p>
 
-                                </div>
+                                        <div>
+                                            <p style="display: inline-block; margin-right:64px"> Giới Tính : </p>
+                                            <p style="display: inline-block;"> {{ $data->CUS_Gender }}</p>
+                                        </div>
 
-                                <div style="padding-top: 20px">
-                                    <input style="width: 365px; margin: 0 auto" class="form-control" type="text"
-                                        placeholder='Số điện thoại (*)' aria-label=".form-control-lg example">
+                                        <div>
+                                            <p style="display: inline-block; margin-right:58px"> Ngày sinh : </p>
+                                            <p style="display: inline-block;">{{ $data->CUS_Birthday }}</p>
+                                        </div>
 
-                                </div>
+                                        <div>
+                                            <p style="display: inline-block; margin-right:36px"> Số điện thoại : </p>
+                                            <p style="display: inline-block;"> {{ $data->CUS_Phone }} </p>
+                                        </div>
 
-                                <div style="padding-top: 20px">
+                                        <div>
+                                            <p style="display: inline-block; margin-right:82px"> Email : </p>
+                                            <p style="display: inline-block;"> {{ $data->LH_Email }} </p>
+                                        </div>
 
+                                        <div>
+                                            <p style="display: inline-block; margin-right:50px"> Triệu Chứng : </p>
+                                            <p style="display: inline-block;"> {{ $data->LH_trieuchung }} </p>
+                                        </div>
+                            </div>
 
-                                    <input style="width: 365px; margin: 0 auto" class="form-control" type="text"
-                                        placeholder=' Để lại gmail nhận thông tin lịch hẹn (*)'
-                                        aria-label=".form-control-lg example">
+                            <h2 style="font-size:18px; font-weight:bold; color:rgb(77, 141, 197)"> Bác Sĩ </h2>
+                            <div style=" margin-top: 10px">
+                                <p style="font-size:16px; display: inline-block; margin-right:104px"> Tên : </p>
+                                <p style="font-size:16px; display: inline-block;"> {{ $data->LH_BSkham }} </p>
 
-                                </div>
+                                <div>
 
-                                <div style="padding-top: 20px">
-                                    <textarea style="width: 365px; margin: 0 auto" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                        placeholder='Vui lòng mô tả rõ triệu chứng của bạn và nhu cầu thăm khám (*)'></textarea>
+                                    <p style="font-size:16px; display: inline-block; margin-right:28px"> Thời gian khám:
+                                    </p>
+                                    <p style="font-size:16px; display: inline-block;">
+                                        Ngày {{ date('d-m-Y', strtotime($data->LH_Ngaykham)) }}
+                                    </p>
 
-                                </div>
-
-                                <div style="padding-top: 10px; text-align:center ">
-
-                                    <a style="width:82px; margin-right:10px" href="{{ route('User.lichkham') }}"
-                                        class="btn btn-outline-secondary">Trở lại</a>
-                                    <a href="{{ route('User.lichkham3') }}" class="btn btn-info">Tiếp tục</a>
+                                    <p style="font-size:16px; display: inline-block;"> Vào lúc {{ $data->LH_Giokham }}</p>
 
                                 </div>
 
+                                <div>
+                                    <p style="font-size:16px; display: inline-block; margin-right:82px">Địa chỉ:</p>
+                                    <p style="font-size:16px; display: inline-block;">Đường 3/2, phường Xuân Khánh, Ninh
+                                        Kiều, Cần Thơ</p>
+                                </div>
+                                @endforeach
+                            @else
+                                <p>No data available</p>
+                                @endif
+                            </div>
+                            <div style=" text-align:center ">
 
+                                <a style="width:82px; margin-right:10px" href="{{ route('User.lichkham') }}"
+                                    class="btn btn-outline-secondary">
+                                    Trở lại</a>
+                                <a id="xacnhan" href="{{ route('sendmail') }}" class="btn btn-info"> Xác nhận </a>
 
+                                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const confirmButton = document.getElementById('xacnhan');
+                                        confirmButton.addEventListener('click', function() {
+                                            Swal.fire({
+                                                title: "Đặt Lịch Thành Công ✅",
+                                                text: "Chúng Tôi Sẽ Liên Hệ Đến Bạn Trong Thời Gian Sớm Nhất",
+                                                icon: "success"
+                                            });
+                                        });
+                                    });
+                                </script>
 
+                            </div>
 
-
-                            </form>
 
                         </div>
-
 
                     </div>
 
@@ -125,17 +143,7 @@
     </div>
 @endsection
 
-@section('js')
-    <script>
-        // Kích hoạt Bootstrap Datepicker
-        $(document).ready(function() {
-            $('#lich').datepicker({
-                format: 'dd/mm/yyyy', // Định dạng ngày tháng
-                autoclose: true // Tự đóng datepicker sau khi chọn
-            });
-        });
-    </script>
-@endsection
+
 
 
 @section('css')

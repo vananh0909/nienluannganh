@@ -13,7 +13,13 @@ class Users extends Model
 
     use HasFactory;
 
+    public $timestamps = false;
+    protected $primaryKey = 'CUS_Id';
     protected $table = 'customer';
+    // Khai báo tên bảng trong cơ sở dữ liệu
+
+    // Khai báo các trường có thể gán (mass assignment)
+    protected $fillable = ['CUS_Name', 'CUS_PASS', 'CUS_Birthday', 'CUS_Avatar', ' CUS_Phone', 'CUS_Email', 'CUS_Address', ' CUS_Gender', 'CUS_Nganhang', 'CUS_Stk'];
 
     public function getAllUser()
     {
@@ -21,10 +27,31 @@ class Users extends Model
         return $customer;
     }
 
-    public function addCustomer($data)
+    public function getAllData()
     {
-        DB::insert('INSERT INTO customer (CUS_Name, CUS_PASS, CUS_Birthday, CUS_Avatar, CUS_Phone, CUS_Email, CUS_Address, CUS_Gender, CUS_Nganhang, CUS_Stk) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', $data);
+        $userId = session('user')['CUS_Id'];
+
+        // Thực hiện truy vấn với id từ session
+        $allData = DB::select('
+        SELECT customer.*, lichhen.*
+        FROM customer
+        LEFT JOIN lichhen ON customer.CUS_Id = lichhen.LH_CustomerID
+        WHERE customer.CUS_Id = ?
+        ORDER BY lichhen.LH_Ngaykham DESC
+        LIMIT 1', [$userId]);
+
+        return $allData;
     }
+
+
+
+    // public function addCustomer($data)
+    // {
+
+    //     DB::insert('INSERT INTO customer (CUS_Name, CUS_PASS, CUS_Birthday, CUS_Avatar, CUS_Phone, CUS_Email, CUS_Address, CUS_Gender, CUS_Nganhang, CUS_Stk) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', $data);
+    //     // Trả về ID của khách hàng vừa được thêm vào
+    //     return DB::getPdo()->lastInsertId();
+    // }
 
     public static function authenticate($CUS_Phone, $CUS_PASS)
     {

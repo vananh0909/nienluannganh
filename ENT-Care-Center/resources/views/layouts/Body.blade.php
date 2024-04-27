@@ -11,7 +11,8 @@
             <div class="col-md-8" style="background-color:#ffffff;  height:110px;margin-left:8px; display: flex;">
 
                 <div style="width:300px;margin-left:18px">
-                    <a style="text-decoration:none ; font-size:20px; color:rgb(86, 86, 86);">
+                    <a href="{{ route('User.lichkham') }}"
+                        style="text-decoration:none ; font-size:20px; color:rgb(86, 86, 86);">
                         <i style="font-size:40px; margin-top:32px; margin-left:46px; color:rgb(47, 47, 197)"
                             class="fa-regular fa-calendar-plus"></i> Lịch hẹn
                     </a>
@@ -45,64 +46,32 @@
 
         <br>
         <div class="row">
-            <div style="margin-left:72px; color:rgb(86, 86, 86); font-weight:bold">
-                <p style="font-size: 16px;">Bác sĩ trực hôm nay
-                    <i style="margin-left:638px; cursor: pointer;" class="fa-solid fa-arrow-right"></i>
+            <div style="margin-left:36px; color:rgb(86, 86, 86); font-weight:bold">
+                <p style="font-size: 16px;">Danh sách bác sĩ trực
+                    <a href="{{ route('User.lichtruc') }}" style="color:rgb(86, 86, 86);"><i
+                            style="margin-left:720px; cursor: pointer;" class="fa-solid fa-arrow-right"></i></a>
                 </p>
 
             </div>
-            <div class="col-md-3" id="dr"
-                style="background-color:#ffffff;  height:212px; margin-right:30px; margin-left:80px;border-radius: 6px; ">
-                <img style="width:90px; height:80px; margin-top:24px; margin-left:66px; border-radius: 6px;"
-                    src="https://ttgdtxphuquoc.edu.vn/hinh-anh-bac-si-nu-dep/imager_6_6391_700.jpg">
-                <div style="text-align:center; margin-top:8px; color:rgb(86, 86, 86);">
-                    <h1 style="font-size:18px"> Dr. Nguyen Minh Tuan</h1>
-                    <p style="font-size:14px;margin-top:2px">Tai-Mũi-Họng</p>
+            @foreach ($bacsitruc as $bs)
+                <div class="col-md-3" id="dr"
+                    style="background-color:#ffffff;  height:224px; margin-right:30px; margin-left:40px;border-radius: 6px; ">
+                    <img style="width:90px; height:80px; margin-top:24px; margin-left:66px; border-radius: 6px;"
+                        src="{{ asset('uploads/avtnhanvien/' . $bs->NV_Avatar) }} ">
+                    <div style="text-align:center; margin-top:8px; color:rgb(86, 86, 86);">
+                        <h1 style="font-size:18px">{{ $bs->lt_tenbacsi }}</h1>
+                        <p style="font-size:14px;margin-top:2px">Tai-Mũi-Họng</p>
+                    </div>
+
+                    <hr>
+                    <h1 style="text-align:center;font-size:12px;color:rgb(86, 86, 86); margin-top:-4px">
+                        <i class="fa-regular fa-clock"></i>
+                        Từ 08:00 đến 17:00
+                    </h1>
+
                 </div>
+            @endforeach
 
-                <hr>
-                <h1 style="text-align:center;font-size:12px;color:rgb(86, 86, 86); margin-top:-4px">
-                    <i class="fa-regular fa-clock"></i>
-                    Từ 08:00 đến 11:00
-                </h1>
-
-            </div>
-
-
-
-            <div class="col-md-3" id="dr"
-                style="background-color:#ffffff; height:212px; margin-right:30px;border-radius: 6px;">
-                <img style="width:90px; height:80px; margin-top:24px; margin-left:66px; border-radius: 6px;"
-                    src="https://honghunghospital.com.vn/wp-content/uploads/2020/05/41.-Phan-V%C4%83n-Ch%C3%AD-scaled.jpg">
-                <div style="text-align:center; margin-top:8px; color:rgb(86, 86, 86);">
-                    <h1 style="font-size:18px"> Dr. Nguyen Thanh Son</h1>
-                    <p style="font-size:14px;margin-top:2px">Tai-Mũi-Họng</p>
-                </div>
-
-                <hr>
-                <h1 style="text-align:center;font-size:12px;color:rgb(86, 86, 86); margin-top:-4px">
-                    <i class="fa-regular fa-clock"></i>
-                    Từ 13:00 đến 17:00
-                </h1>
-            </div>
-
-
-
-            <div class="col-md-3" id="dr" style="background-color:#ffffff;  height:212px;border-radius: 6px;">
-                <img style="width:90px; height:80px; margin-top:24px; margin-left:66px; border-radius: 6px;"
-                    src="https://hthaostudio.com/wp-content/uploads/2022/08/Anh-profile-bac-si-nu-min.jpg.webp">
-                <div style="text-align:center; margin-top:8px; color:rgb(86, 86, 86);">
-                    <h1 style="font-size:18px"> Dr. Nguyen Mai Anh</h1>
-                    <p style="font-size:14px;margin-top:2px">Tai-Mũi-Họng</p>
-                </div>
-
-                <hr>
-                <h1 style="text-align:center;font-size:12px;color:rgb(86, 86, 86); margin-top:-4px">
-                    <i class="fa-regular fa-clock"></i>
-                    Từ 08:00 đến 11:00
-                </h1>
-
-            </div>
         </div>
     </div>
     <div class="col-md-3"

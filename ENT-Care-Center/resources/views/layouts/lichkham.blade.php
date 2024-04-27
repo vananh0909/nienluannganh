@@ -18,97 +18,114 @@
             <div class="row">
                 <div class="col-md-8" style="background-color:rgb(234, 235, 239); margin-left: 6px">
                     <div style="text-align:center; margin-top: 6px; padding-bottom: 8px">
-                        <h1 style=" font-size: 24px; "> ĐĂNG KÍ LỊCH KHÁM </h1>
+                        <h1 style=" font-size: 24px;  color:rgb(86, 86, 86); "> ĐĂNG KÍ LỊCH KHÁM </h1>
                     </div>
 
+                    @if (session('user'))
+                        {{-- <p>Xin chào, {{ session('user')->CUS_Name }}</p> --}}
 
-                    <div style="background-color: #ffffff; width: 1000px; height:584px; border-radius:6px; margin:0 auto"
-                        class="col-md-6">
-                        <div style=" margin-left:8px; margin-bottom: 20px; padding-top: 4px">
-                            <p
-                                style=" margin-top:5px; display: inline; color:rgb(86, 86, 86); font-size: 18px; font-weight:bold;">
-                                Bước 1/3
-                                :
-                            </p>
-                            <p style=" margin-top:5px; display: inline; font-size: 18px">Chọn thông tin lịch khám</p>
+                        <div style="background-color: #ffffff; width: 1000px; height:584px; border-radius:6px; margin:0 auto"
+                            class="col-md-6">
+                            <form method="POST" action="{{ route('User.postlichkham') }}">
+                                @csrf
+                                <div style="padding-top: 8px">
+                                    <p style=" margin-left: 8px"> Chọn bác sĩ khám (<span style="color:red">*</span>) Dưới
+                                        đây là danh sách bác sĩ trực trong ngày hôm nay</p>
 
-                            <hr style="margin-left:-8px; color:#a1a1a1">
+                                    <select class="form-select" style=" width: 400px; margin: 0 auto; padding: 6px"
+                                        aria-label="Default select example" name="LH_BSkham" required>
+                                        <option required selected> Chọn bác sĩ khám </option>
+                                        @foreach ($bacsitruc as $bs)
+                                            <option value="{{ $bs->lt_tenbacsi }}">{{ $bs->lt_tenbacsi }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p> Ngày khám (<span style="color:red">*</span>)</p>
+                                    <div style=" width: 400px; margin: 0 auto; ">
+                                        <input style="margin-top: 10px; margin-bottom: 10px" id="ngaykham"
+                                            class="form-control" type="date" aria-label=".form-control-lg example"
+                                            name="LH_Ngaykham" required>
+
+
+                                    </div>
+                                    <p>Giờ khám (<span style="color:red">*</span>)</p>
+
+                                    <div style="text-align:center; margin:12px">
+                                        <select class="form-select" style=" width: 300px; margin: 0 auto; padding: 6px"
+                                            aria-label="Default select example" name="LH_Giokham" required>
+                                            <option selected> Chọn Giờ Khám </option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="08:30">08:30</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="09:30">09:30</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="10:30">10:30</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="13:30">13:30</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="14:30">14:30</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="15:30">15:30</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="16:30">16:30</option>
+                                        </select>
+
+
+
+                                    </div>
+                                    <div>
+                                        <p>Nhập Email (<span style="color:red">*</span>)</p>
+                                        <input style="width: 365px; margin: 0 auto" class="form-control" type="email"
+                                            placeholder=' Để lại gmail nhận thông tin lịch hẹn'
+                                            aria-label=".form-control-lg example" name="LH_Email" required>
+
+                                    </div>
+
+                                    <div>
+                                        <p> Nhập rõ triệu chứng (<span style="color:red">*</span>)</p>
+                                        <textarea style="width: 365px; margin: 0 auto" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                            type="text" placeholder='Vui lòng mô tả rõ triệu chứng của bạn và nhu cầu thăm khám' name="LH_trieuchung"
+                                            required></textarea>
+
+                                    </div>
+
+                                    <p style="font-size:12px; font-weight:bold; color:rgb(86, 86, 86); margin-top: 16px">
+                                        Lưu ý:
+                                        Thời
+                                        gian khám trên
+                                        chỉ là thời gian dự
+                                        kiến, chúng tôi sẽ liên hệ xác nhận thời gian
+                                        khám chính xác tới quý khách sau khi quý khách đặt hẹn</p>
+
+
+                                    <div style="text-align:center;margin-top: 16px">
+                                        <a style="width:82px; margin-right:4px"
+                                            href="{{ route('User.Home') }}"class="btn btn-outline-secondary">
+                                            Trở lại</a>
+                                        <button type="submit" class="btn btn-info">Tiếp tục</button>
+                                    </div>
+
+                                </div>
+
+                            </form>
+
 
                         </div>
+                    @else
+                        <div style="background-color: #ffffff; width: 1000px; height:584px; border-radius:6px; margin:0 auto"
+                            class="col-md-6">
 
-                        <select class="form-select" style=" width: 400px; margin: 0 auto; padding: 6px"
-                            aria-label="Default select example">
-                            <option selected> Chọn bác sĩ khám (<span style="color:red">*</span>)</option>
-                            <option value="1">Nguyen Minh Tuan</option>
-                            <option value="2">Nguyen Thanh Son</option>
-                            <option value="3">Nguyen Mai Anh</option>
-                        </select>
+                            <h1 style="text-align: center; padding-top: 240px; font-size: 22px;  color:rgb(86, 86, 86);">
+                                XIN VUI LÒNG ĐĂNG NHẬP ĐỂ ĐĂNG KÝ LỊCH KHÁM
 
-                        <div style="margin: 10px">
-                            <p> Thời gian khám</p>
-                            <p> Ngày khám (<span style="color:red">*</span>)</p>
-                            <div style=" width: 400px; margin: 0 auto; ">
-                                <input style="margin-top: 10px; margin-bottom: 10px" id="nganhang" class="form-control"
-                                    type="date" aria-label=".form-control-lg example">
-
-
-                            </div>
-                            <p>Giờ khám (<span style="color:red">*</span>)</p>
-
-                            <div style="text-align:center; margin:12px">
-                                <button style="margin-right: 8px; margin-bottom:4px" type="button"
-                                    class="btn btn-light">08:00</button>
-                                <button style="margin-right: 8px; margin-bottom:4px" type="button"
-                                    class="btn btn-light">08:30</button>
-                                <button style="margin-right: 8px; margin-bottom:4px" type="button"
-                                    class="btn btn-light">09:00</button>
-                                <button style="margin-right: 8px; margin-bottom:4px" type="button"
-                                    class="btn btn-light">09:30</button>
-                                <button style="margin-right: 8px; margin-bottom:4px" type="button"
-                                    class="btn btn-light">10:00</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">10:30</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">11:00</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">13:00</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">13:30</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">14:00</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">14:30</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">15:00</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">15:30</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">16:00</button>
-                                <button style="margin-right: 8px; margin-bottom:8px" type="button"
-                                    class="btn btn-light">16:30</button>
-
-
-                            </div>
-
-                            <p style="font-size:12px; font-weight:bold; color:rgb(86, 86, 86); margin-top: 40px"> Lưu ý:
-                                Thời
-                                gian khám trên
-                                chỉ là thời gian dự
-                                kiến, tổng đài sẽ liên hệ xác nhận thời gian
-                                khám chính xác tới quý khách sau khi quý khách đặt hẹn</p>
-                            <div style="text-align:center;margin-top: 60px">
-                                <a style="width:82px; margin-right:4px"
-                                    href="{{ route('User.Home') }}"class="btn btn-outline-secondary">
-                                    Trở lại</a>
-                                <a href="{{ route('User.lichkham2') }}" class="btn btn-info">Tiếp tục</a>
-                            </div>
-
+                                <br>
+                                <a class="btn btn-info" href="{{ route('User.dangnhap') }}"
+                                    style="text-decoration: none; margin-top: 8px">Đăng
+                                    Nhập</a>
+                            </h1>
                         </div>
-
-
-
-
-                    </div>
+                    @endif
                 </div>
 
                 <div class="col-md-3"
@@ -122,7 +139,6 @@
 
 
     </div>
-
 
 
     </div>

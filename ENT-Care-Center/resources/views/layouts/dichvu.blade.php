@@ -44,39 +44,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                @foreach ($Dichvu1 as $dv)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $dv->DV_Tendv }} </td>
+                                        <td> {{ $dv->DV_Gia }}</td>
 
-                                    <th scope="row">1</th>
-                                    <td>Đặt hẹn lựa chọn Bác sĩ và Giờ Khám bệnh</td>
-                                    <td>Không thu phí</td>
+                                    </tr>
+                                @endforeach
 
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Khám và Nội soi Tai - Mũi - Họng</td>
-                                    <td>400,000</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Tái khám và Nội soi Tai - Mũi - Họng</td>
-                                    <td>330,000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Đo thính lực</td>
-                                    <td>250,000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Chức năng thông khí vòi nhĩ</td>
-                                    <td>250,000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Tư vấn Nha Khoa</td>
-                                    <td>200,000</td>
-                                </tr>
                             </tbody>
 
                         </table>
@@ -87,126 +63,34 @@
                         <br>
                         <div style=" margin-left:8px; margin-bottom: 20px; padding-top: 8px">
 
-                            <div style="margin-top: 8px; display: inline-block;">
-                                <div style="width: 540px; float: left; position: relative; margin-right:10px">
 
-                                    <img style="width: 540px;  border-radius: 6px"
-                                        src="{{ asset('images/img-nen/20210827_040655_503312_shutterstock_28616597.max-800x800.jpg') }}">
+
+
+                            @foreach ($Dichvu2 as $dv2)
+                                <div style="margin-top: 8px; display: inline-block; padding-bottom: 50px ">
+                                    <div style="width: 200px; float: left; position: relative; margin-right:10px">
+                                        <img style="width: 200px; border-radius:6px; "
+                                            src="{{ asset('uploads/dichvu/' . $dv2->DV2_anhdv) }}">
+
+                                    </div>
+
+                                    <a
+                                        style="float: right; margin-right: 420px;  font-size:20px ; margin-bottom: 10px; font-weight:500">
+                                        {{ $dv2->DV2_Tendv }}
+                                    </a>
+                                    <br>
+
+                                    <div
+                                        style=" padding: 10px; margin-left: 10px;margin-top: 12px; font-size: 16px; text-align: justify;  ">
+                                        <p>
+                                            {{ $dv2->DV2_gioithieu }}
+                                        </p>
+                                    </div>
 
                                 </div>
-
-                                <a
-                                    style="float: right; margin-right: 60px;  font-size:20px ; margin-bottom: 10px; font-weight:500">
-                                    Gói khám sức khỏe
-                                    tổng quát Cao cấp
-                                </a>
-                                <br>
-
-                                <p style="padding: 10px;margin-top: 12px; font-size: 16px; text-align: justify;  ">
-                                    Gói khám sức khỏe tổng quát Cao cấp 2021 mang lại giải pháp thăm khám toàn diện và sàng
-                                    lọc một số bệnh lý ung thư như dạ dày, đại tràng ... với các bác sĩ, chuyên gia cao cấp
-                                    tại Vinmec, từ đó có hướng xây dựng kế hoạch chăm sóc sức khoẻ.
-                                </p>
-                            </div>
-
-
+                            @endforeach
                             <hr style="margin-right: 6px">
 
-                            <div style="margin-top: 8px; display: inline-block; ">
-                                <div style="width: 200px; float: left; position: relative; margin-right:10px">
-                                    <img style="width: 200px; border-radius:6px; "
-                                        src="{{ asset('images/img-nen/20210826_101055_041407_shutterstock_69874095.max-800x800.jpg') }}">
-
-                                </div>
-
-                                <a
-                                    style="float: right; margin-right: 420px;  font-size:20px ; margin-bottom: 10px; font-weight:500">
-                                    Gói khám sức khỏe tổng quát Nâng cao
-                                </a>
-                                <br>
-
-                                <div
-                                    style=" padding: 10px; margin-left: 10px;margin-top: 12px; font-size: 16px; text-align: justify;  ">
-                                    <p>Gói khám sức khỏe tổng quát được thiết kế có tính khoa học và tính thực tiễn nhằm
-                                        phát
-                                        hiện sớm, can thiệp, điều trị kịp thời nhằm làm giảm đến mức tối thiểu những biến
-                                        chứng
-                                        của những bệnh hiểm nghèo đe dọa cuộc sống của bạn.
-                                    </p>
-                                </div>
-                            </div>
-                            <hr style="margin-right: 6px">
-
-
-                            <div style="margin-top: 8px; display: inline-block; ">
-                                <div style="width: 200px; float: left; position: relative; margin-right:10px">
-                                    <img style="width: 200px; border-radius:6px; "
-                                        src="{{ asset('images/img-nen/20210826_103319_815440_20395.max-800x800.jpg') }}">
-
-                                </div>
-
-                                <a
-                                    style="float: right; margin-right: 428px;  font-size:20px ; margin-bottom: 10px; font-weight:500">
-                                    Gói khám sức khỏe tổng quát cho Nữ
-                                </a>
-                                <br>
-
-                                <div
-                                    style=" padding: 10px; margin-left: 10px;margin-top: 12px; font-size: 16px; text-align: justify;  ">
-                                    <p>
-                                        Gói khám sức khỏe tổng quát Tiêu chuẩn Nữ < 40 tuổi được thực hiện bởi các bác sĩ
-                                            chuyên môn giỏi, trình độ cao, giúp đánh giá chính xác về tình trạng sức khỏe
-                                            chung đồng thời phát hiện sớm một số bệnh lý nguy hiểm </p>
-                                </div>
-                            </div>
-                            <hr style="margin-right: 6px">
-
-
-                            <div style="margin-top: 8px; display: inline-block; ">
-                                <div style="width: 200px; float: left; position: relative; margin-right:10px">
-                                    <img style="width: 200px; border-radius:6px; "
-                                        src="{{ asset('images/img-nen/20190226_041618_396980_sk_td.max-800x800.png') }}">
-
-                                </div>
-
-                                <a
-                                    style="float: right; margin-right: 420px;  font-size:20px ; margin-bottom: 10px; font-weight:500">
-                                    Gói khám sức khỏe tổng quát cho Nam </a>
-                                <br>
-
-                                <div
-                                    style=" padding: 10px; margin-left: 10px;margin-top: 12px; font-size: 16px; text-align: justify;  ">
-                                    <p>Gói khám sức khoẻ tổng quát Tiêu chuẩn Nam < 40 được thực hiện bởi các bác sĩ chuyên
-                                            môn giỏi, trình độ cao, giúp đánh giá chính xác về tình trạng sức khỏe chung
-                                            đồng thời phát hiện sớm một số bệnh lý nguy hiểm </p>
-                                </div>
-                            </div>
-                            <hr style="margin-right: 6px">
-
-
-
-
-                            <div style="margin-top: 8px; display: inline-block; ">
-                                <div style="width: 200px; float: left; position: relative; margin-right:10px">
-                                    <img style="width: 200px; border-radius:6px; "
-                                        src="{{ asset('images/img-nen/20190226_040214_944846_sktq_nhi.max-800x800.jpg') }}">
-
-                                </div>
-
-                                <a
-                                    style="float: right; margin-right: 430px;  font-size:20px ; margin-bottom: 10px; font-weight:500">
-                                    Gói khám sức khỏe tổng quát Trẻ em </a>
-                                <br>
-
-                                <div
-                                    style=" padding: 10px; margin-left: 10px;margin-top: 12px; font-size: 16px; text-align: justify;  ">
-                                    <p>Với gói khám sức khoẻ tổng quát trẻ em, bé yêu của bạn sẽ được khám toàn diện kết hợp
-                                        với chẩn đoán bằng hình ảnh, giúp bạn kiểm tra tổng thể sức khỏe cho bé, sàng lọc
-                                        triệu chứng để sớm phát hiện và điều trị nếu cần.
-                                    </p>
-                                </div>
-                            </div>
-                            <hr style="margin-right: 6px">
 
 
 
