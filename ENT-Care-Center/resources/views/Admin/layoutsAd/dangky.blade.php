@@ -65,7 +65,7 @@
                     </div>
                     <div>
                         <p style="font-size:13px; margin-left:130px; margin-top: 10px"> Bạn đã có tài khoản? <a
-                                href="{{ route('Admin.dangnhap') }}">Đăng Nhập</a></p>
+                                href="{{ route('Admin.dangnhapad') }}">Đăng Nhập</a></p>
                     </div>
                 </div>
             </div>

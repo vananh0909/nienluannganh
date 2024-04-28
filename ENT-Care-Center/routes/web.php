@@ -38,10 +38,10 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
     Route::post('editnhanvien/{id}', [AdminController::class, 'editnhanvien'])->name('editnhanvien');
     Route::get('xoanhanvien/{id}', [AdminController::class, 'xoanhanvien'])->name('xoanhanvien');
     Route::get('thongkebaocao', [AdminController::class, 'thongkebaocao'])->name('thongkebaocao');
-    Route::get('dangnhap', [AdminController::class, 'dangnhap'])->name('dangnhap');
-    Route::post('postdangnhap', [AdminController::class, 'postdangnhapad'])->name('postdangnhapad');
     Route::get('dangky', [AdminController::class, 'dangky'])->name('dangky');
     Route::post('postdangky', [AdminController::class, 'postdangky'])->name('postdangky');
+    Route::get('dangnhapad', [AdminController::class, 'dangnhapad'])->name('dangnhapad');
+    Route::post('login', [AdminController::class, 'login'])->name('login');
 });
 
 

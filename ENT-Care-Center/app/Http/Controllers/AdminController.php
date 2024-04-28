@@ -22,6 +22,8 @@ use App\Models\lt_lichtruc;
 
 class AdminController extends Controller
 {
+
+
     public $data = [];
     public function index()
     {
@@ -30,39 +32,6 @@ class AdminController extends Controller
 
         return view("Admin.homead", $this->data);
     }
-
-    public function dangnhap()
-    {
-        $this->data['title'] = "ĐĂNG NHẬP TRANG QUẢN TRỊ";
-
-
-        return view("Admin.layoutsAd.bodyAd", $this->data);
-    }
-
-    public function postdangnhapad(Request $request)
-    {
-        // Xác thực người dùng và lấy thông tin người dùng
-        $user = admin::authenticate(
-            $request->input('AD_Phone'),
-            $request->input('AD_Password')
-        );
-        dd($user);
-
-        // if ($user) {
-        //     // Đăng nhập thành công, lưu thông tin người dùng vào session
-        //     session(['user' => $user]);
-
-        //     // Chuyển hướng đến trang lịch khám
-        //     return redirect()->route('Admin.quanlylichhen');
-        // } else {
-        // Đăng nhập thất bại, chuyển hướng đến trang đăng nhập và hiển thị thông báo
-        //     // return redirect()->route('User.dangnhap')->with('error', 'Đăng nhập không thành công.');
-        // }
-    }
-
-
-
-
 
 
     public function dangky()
@@ -75,7 +44,6 @@ class AdminController extends Controller
 
     public function postdangky(Request $request)
     {
-
         $dangky = new admin;
 
         $dangky->AD_Name = $request->input('AD_Name');
@@ -83,14 +51,48 @@ class AdminController extends Controller
         $dangky->AD_Email = $request->input('AD_Email');
         $dangky->AD_Password = Hash::make($request->input('AD_Password'));
 
-
-
-
         $dangky->save();
+
+        // Lưu chỉ id của admin vào session
         session(['admin' => $dangky->id]);
 
         return redirect()->back()->with('status', 'Thêm Thành Công!');
     }
+
+    public function dangnhapad()
+    {
+        $this->data['title'] = "TRANG ĐĂNG NHẬP QUẢN TRỊ";
+
+
+        return view("Admin.layoutsAd.bodyAd", $this->data);
+    }
+
+
+
+
+
+
+
+    public function login(Request $request)
+    {
+        // Xác thực người dùng và lấy thông tin người dùng
+        $admin = admin::authenticate(
+            $request->input('AD_Email'),
+            $request->input('AD_Password')
+        );
+        dd($request);
+        if ($admin) {
+            // Đăng nhập thành công, lưu thông tin người dùng vào session
+            session(['admin' => $admin]);
+
+            // Chuyển hướng đến trang quản lý bệnh nhân
+            return redirect()->route('Admin.quanlybenhnhan');
+        } else {
+            // Đăng nhập thất bại, chuyển hướng đến trang đăng nhập và hiển thị thông báo
+            return redirect()->back()->with('error', 'Đăng nhập không thành công.');
+        }
+    }
+
 
     public function quanlylichhen()
     {

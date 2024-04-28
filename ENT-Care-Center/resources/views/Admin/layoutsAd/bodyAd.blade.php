@@ -8,16 +8,23 @@
     </div>
     <div
         style="background-color: rgb(234, 235, 239); width: 500px; height:520px; border-radius:6px; margin:0 auto; border: 1px solid rgb(154, 153, 153);">
-
+        @if (session('status'))
+            <div style="padding-top:60px">
+                <h4 style="width: 300px; height:10px; margin: 0 auto;font-size:18px; text-align:center; padding-bottom:40px;"
+                    class="alert alert-success">
+                    {{ session('status') }}</h4>
+            </div>
+        @endif
         <div style="text-align: center">
             <img style="width: 200px" src="{{ asset('images/img-nen/logo.png') }}">
         </div>
-        <form method="POST" action="{{ route('Admin.postdangnhapad') }}">
+        <form method="POST" action="{{ route('Admin.login') }}">
             @csrf
             <div style="margin: 20px 40px 10px 40px">
                 <label for="sodienthoai" class="form-label">Email (<span style="color:red">*</span>)</label>
 
-                <input type="text" id="sdt" class="form-control" name="AD_Email" required>
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    aria-describedby="passwordHelpInline" name="AD_Email" required>
 
             </div>
 
